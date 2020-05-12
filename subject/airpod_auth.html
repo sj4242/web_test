@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- index.html -->
+    <meta charset="utf-8">
+    <!-- ������ ���� ���� Bootstrap ���� -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap MaxCDN ����-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap���� �����ϴ� CSS�� �����Ͽ� ��� -->
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        
+        .carousel-inner > .item > img {
+            width:1200px;
+            height:500px;
+        }   
+    
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+        </style>
+
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Navigation Bar Container -->
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">   
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fulid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="./index_auth.html">
+                        <img style="max-width:45px; margin-top: -13px;" src="./Bootstrap_Test_image/logo.png">
+                </div>
+                <div class="collapse navbar-collapse" id="MyNav">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./index_auth.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="phone_auth.html"> Phone </a></li>
+                            <li><a href="tablet_auth.html"> Tablet </a></li>
+                            <li><a href="airpod_auth.html"> Airpod </a></li>
+                            <li><a href="accessary_auth.html"> Accessary </a></li>
+                        
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="./event_auth.html">Event & Community <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                                <div class="row">
+                                <div class="col-sm-4"><a href="https://www.instagram.com/" target="_blank"><img src="./Bootstrap_Test_image/insta.png" class="img-rounded" alt="Error"></a></div>
+                                <div class="col-sm-4"><a href="https://www.facebook.com/" target="_blank"><img src="./Bootstrap_Test_image/facebook.png" class="img-rounded" alt="Error"></a></div>
+                                <div class="col-sm-4"><a href="https://twitter.com/" target="_blank"><img src="./Bootstrap_Test_image/twitter.png" class="img-rounded" alt="Error"></a></div>
+                                </div>
+                                
+                                <a href="./php/board.php" ><img src="./Bootstrap_Test_image/board.png" class="img-rounded" alt="Error"></a>>
+                                <a href="#"><img src="./Bootstrap_Test_image/event.jpg" class="img-rounded" alt="Error"></a>
+                                <div class="carousel-caption">
+
+                                </div>
+                        </ul>
+                    </li><li class="dropdown">
+                        <a class="narbar-brand" href="./support_auth.html"> Support </span></a>
+                       
+                    </li>
+
+                    <form class="navbar-form navbar-left" action="#">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+            </li>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./php/logout.php"><span class="glyphicon glyphicon-log-out"></span>  LOGOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+</div>
+</div><br>
+
+
+    <!-- Login Modal Container -->
+    <div class="container">
+        <div class="modal fade" id="Modal_Login" role="dialog">
+            <div class="modal-dialog">
+            <div class="modal-content">
+    
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">LOGIN</h4>
+            </div>
+    
+            <div class="modal-body">
+            <div class="container">
+            <form class="form-horizontal" action="./php/login.php" method="POST" name="login-form">
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="login_id" class="col-sm-1 control-label">ID</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" name="login_id" id="login_id" maxlength="20" type="text" autofocus placeholder="User ID Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="login_pw" class="col-sm-1 control-label">PW</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" name="login_pw" id="login_pw" maxlength="30" type="password" autofocus placeholder="User Password Here" required autocomplete="off" >
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default">LOGIN</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+            </div>
+            </form>
+    
+            </div>
+            </div>
+        </div>
+        </div>
+    
+        <!-- SignUP Modal Container -->
+        <div class="container">
+        <div class="modal fade" id="Modal_Signup" role="dialog">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+    
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">SIGN UP</h4>
+            </div>
+    
+            <div class="modal-body">
+            <div class="container">
+            <form class="form-horizontal" action="./php/signup.php" method="POST" name="signup-form"> 
+                <div class="form-group">
+                    <label style="text-align:left" for="id" class="col-sm-2 control-label">USER ID</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="id" id="id" maxlength="20" type="text" autofocus placeholder="User ID Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="pw" class="col-sm-2 control-label">USER PW</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="pw" id="pw" maxlength="30" type="password" placeholder="User Password Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="pw2" class="col-sm-2 control-label">RE-ENTER PW</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="pw2" id="pw2" maxlength="30" type="password" placeholder="User Repeat Password Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="name" class="col-sm-2 control-label">NAME</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="name" id="name" maxlength="20" type="text" placeholder="User Name Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="phone" class="col-sm-2 control-label">PHONE</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="phone" id="phone" maxlength="50" type="text" placeholder="User Phone Number Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="addr" class="col-sm-2 control-label">ADDRESS</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="addr" id="addr" maxlength="50" type="text" placeholder="User Address Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="mail" class="col-sm-2 control-label">E-Mail</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="mail" id="mail" maxlength="50" type="email" placeholder="User E-Mail Address Here" required autocomplete="off" >
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default">SIGN UP</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+            </div>
+            </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Container 1 -->
+        <div class="container">
+            <h1></h1>
+            <p class="text-center"><br><br><br><br><img src="./Bootstrap_Test_image/accessary_main.png" class="img-rounded" alt="Error"></p>
+            <!-- src���� Image�� �����θ� ���� ���� ���� ��ο� �̹����� �����ϹǷ� ��λ��� -->
+            <!-- alt������ Image�� �ε��� �� ���� ��Ȳ���� ǥ�� �� �޽��� ���� -->
+            <br><br>
+            </div>
+
+
+    <!-- Catalog product-->
+    <div id="STORE" class="container text-center" >
+        <div class="col-sm-3"><a href="./phone_auth.html" target="_blank"><img src="./Bootstrap_Test_image/option1.png" class="img-rounded" alt="Error"></a></div>
+        <div class="col-sm-3"><a href="./tablet_auth.html" target="_blank"><img src="./Bootstrap_Test_image/option2.png" class="img-rounded" alt="Error"></a></div>
+        <div class="col-sm-3"><a href="./airpod_auth.html" target="_blank"><img src="./Bootstrap_Test_image/option3.png" class="img-rounded" alt="Error"></a></div>
+        <div class="col-sm-3"><a href="./accessary_auth.html" target="_blank"><img src="./Bootstrap_Test_image/option4.png" class="img-rounded" alt="Error"></a></div>
+    </body>
+    
+    <body>
+    <!-- Main Content (Collapse) product-->
+    <div id="STORE" class="container text-center" >
+        <h3></h3>
+        <br>
+
+        <div class="row">
+    
+        <div class="col-sm-4">
+            <a href="#STORE1" data-toggle="collapse">
+                <img src="./Bootstrap_Test_image/airpod1.png" alt="product1" width="200" height="250">
+            </a>
+            <br>
+            <div id="STORE1" class="collapse collapse in">
+                <h5 class="text-center"><strong>[ FinePot 2 ]</strong></h5>
+                <p>Sale Price : ￦350,000</p>
+
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <a href="#STORE2" data-toggle="collapse">
+                <img src="./Bootstrap_Test_image/airpod2.png" alt="product2" width="200" height="250">
+            </a>
+            <br>
+            <div id="STORE2" class="collapse collapse in">
+                <h5 class="text-center"><strong>[ FinePot 1 ]</strong></h5>
+                <p>Price : ￦300,000</p>
+
+                <br><br><br><br>
+            </div>
+        </div>
+        </div>
+
+        
+
+
+    </body>
+
+
+
+ <!-- �������� Container -->
+ <div id="contact" class="container">
+    <h3>QUESTION</h3><br>
+    <div class="row">
+  
+    <div class="col-md-4">
+        <p><span class="glyphicon glyphicon-map-marker"></span> Seoul, KR</p>
+        <p><span class="glyphicon glyphicon-phone"></span> Phone: +82 1111-1111</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> Email: YSH@KMG.com</p>
+    </div>
+
+    <div class="col-md-8">
+        <div class="row">
+        <form action="#" method="POST" name="service-form"> 
+        <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" maxlength="10" placeholder="Name" type="text" required autocomplete="off">
+        </div>
+        <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" maxlength="40" placeholder="Email" type="email" required autocomplete="off">
+        </div>
+        </div>
+
+        <textarea class="form-control" id="comments" maxlength="100" placeholder="Comment" rows="5" required autocomplete="off"></textarea>
+        <br>
+        <div class="row">
+        <div class="col-md-12 form-group">
+            <button class="btn pull-right btn-default" type="submit">SEND</button>
+        </div>
+        </div>
+        </form>
+    </div>
+    </div>
+
+
+
+
+    
+    
+ <!-- Down Manu -->
+ 
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">shop and learn</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">Services</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">Store</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">For business</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">Account</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">About Us</a></div>
+ <div class="btn list-group"></div>
+
+<!-- footer Container -->
+<footer class="container text-center">
+    <p><span>More ways to shop: Find Our Store or other retailer near you. Or call 1111-1111. </span></p>
+    <p><span>Cloud System Test Site<br>Copyright &copy; Shanghwancchang</span></p>
+</footer>
+</html>
+
+
+
+
