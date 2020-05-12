@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- index.html -->
+    <meta charset="utf-8">
+    <!-- ������ ���� ���� Bootstrap ���� -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap MaxCDN ����-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap���� �����ϴ� CSS�� �����Ͽ� ��� -->
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        
+        .carousel-inner > .item > img {
+            width:1200px;
+            height:500px;
+        }   
+    
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+        </style>
+
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Navigation Bar Container -->
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">   
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fulid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="./index.html">
+                        <img style="max-width:45px; margin-top: -13px;" src="./Bootstrap_Test_image/logo.png">
+                </div>
+                <div class="collapse navbar-collapse" id="MyNav">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="phone.html"> Phone </a></li>
+                            <li><a href="tablet.html"> Tablet </a></li>
+                            <li><a href="airpod.html"> Airpod </a></li>
+                            <li><a href="accessary.html"> Accessary </a></li>
+                        
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="./event.html">Event & Community <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                                <div class="row">
+                                <div class="col-sm-4"><a href="https://www.instagram.com/" target="_blank"><img src="./Bootstrap_Test_image/insta.png" class="img-rounded" alt="Error"></a></div>
+                                <div class="col-sm-4"><a href="https://www.facebook.com/" target="_blank"><img src="./Bootstrap_Test_image/facebook.png" class="img-rounded" alt="Error"></a></div>
+                                <div class="col-sm-4"><a href="https://twitter.com/" target="_blank"><img src="./Bootstrap_Test_image/twitter.png" class="img-rounded" alt="Error"></a></div>
+                                </div>
+                                
+                                <a href="./index.html" onclick="alert('로그인 후 이용가능합니다.');"><img src="./Bootstrap_Test_image/board.png" class="img-rounded" alt="Error"></a>
+                                <a href="./mother.html"><img src="./Bootstrap_Test_image/event.jpg" class="img-rounded" alt="Error"></a>
+                                <div class="carousel-caption">
+
+                                </div>
+                        </ul>
+                    </li><li class="dropdown">
+                        <a class="narbar-brand" href="./support.html"> Support </span></a>
+                       
+                    </li>
+
+                    <form class="navbar-form navbar-left" action="#">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#Modal_Login"><span class="glyphicon glyphicon-log-in"></span>  LOGIN</a></li>
+                    <li><a data-toggle="modal" data-target="#Modal_Signup"><span class="glyphicon glyphicon-user"></span>  SIGN UP</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Login Modal Container -->
+    <div class="container">
+        <div class="modal fade" id="Modal_Login" role="dialog">
+            <div class="modal-dialog">
+            <div class="modal-content">
+    
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">LOGIN</h4>
+            </div>
+    
+            <div class="modal-body">
+            <div class="container">
+            <form class="form-horizontal" action="./php/login.php" method="POST" name="login-form">
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="login_id" class="col-sm-1 control-label">ID</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" name="login_id" id="login_id" maxlength="20" type="text" autofocus placeholder="User ID Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="login_pw" class="col-sm-1 control-label">PW</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" name="login_pw" id="login_pw" maxlength="30" type="password" autofocus placeholder="User Password Here" required autocomplete="off" >
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default">LOGIN</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+            </div>
+            </form>
+    
+            </div>
+            </div>
+        </div>
+        </div>
+    
+        <!-- SignUP Modal Container -->
+        <div class="container">
+        <div class="modal fade" id="Modal_Signup" role="dialog">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+    
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">SIGN UP</h4>
+            </div>
+    
+            <div class="modal-body">
+            <div class="container">
+            <form class="form-horizontal" action="./php/signup.php" method="POST" name="signup-form"> 
+                <div class="form-group">
+                    <label style="text-align:left" for="id" class="col-sm-2 control-label">USER ID</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="id" id="id" maxlength="20" type="text" autofocus placeholder="User ID Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="pw" class="col-sm-2 control-label">USER PW</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="pw" id="pw" maxlength="30" type="password" placeholder="User Password Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="pw2" class="col-sm-2 control-label">RE-ENTER PW</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="pw2" id="pw2" maxlength="30" type="password" placeholder="User Repeat Password Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="name" class="col-sm-2 control-label">NAME</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="name" id="name" maxlength="20" type="text" placeholder="User Name Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="phone" class="col-sm-2 control-label">PHONE</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="phone" id="phone" maxlength="50" type="text" placeholder="User Phone Number Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="addr" class="col-sm-2 control-label">ADDRESS</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="addr" id="addr" maxlength="50" type="text" placeholder="User Address Here" required autocomplete="off" >
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label style="text-align:left" for="mail" class="col-sm-2 control-label">E-Mail</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="mail" id="mail" maxlength="50" type="email" placeholder="User E-Mail Address Here" required autocomplete="off" >
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default">SIGN UP</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+            </div>
+            </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+    <h1 class="text-center"><br><br><br>If you forgot the passcode on your device,</h1>
+    <h1 class="text-center">or your device is disabled</h1><br>
+    <blockquote>
+    <p class="text-center">
+        <div class="col-xs-2"></div><p>If you forgot the passcode on your device, or if a message says that your iPhone is disabled, learn what to do.</p><br>
+        <div class="col-xs-2"></div><p>If you enter the wrong passcode too many times, you’ll see a message that your device is disabled. </p><br>
+        <div class="col-xs-2"></div><p>If you can’t remember your passcode, you'll need to erase your iPhone, which deletes your data and settings, including the passcode. </p><br>
+        <div class="col-xs-2"></div><p>If you backed up your device, you can restore your data and settings after restoring your device.</p> <br>
+        <div class="col-xs-2"></div><p>If you never backed up your iPhone before you forgot your passcode,</p><br>
+        <div class="col-xs-2"></div><p>you won't be able to save the data on your device.</p><br>
+        <div class="col-xs-2"></div><p>Follow the steps below to remove your passcode.</p><br>
+        <div class="col-xs-2"></div><p>Plug into one of these three power sources:</p><br>
+    </p>
+    </body>
+
+
+
+
+
+
+
+
+
+    
+    
+ <!-- Down Manu -->
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">shop and learn</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">Services</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">Store</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">For business</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">Account</a></div>
+ <div class="btn col-sm-4" ><a href="./index.html" target="_blank">About Us</a></div>
+ <div class="btn list-group"></div>
+
+<!-- footer Container -->
+<footer class="container text-center">
+    <p><span>More ways to shop: Find Our Store or other retailer near you. Or call 1111-1111. </span></p>
+    <p><span>Cloud System Test Site<br>Copyright &copy; Shanghwancchang</span></p>
+</footer>
+</html>
+
+
+
+
